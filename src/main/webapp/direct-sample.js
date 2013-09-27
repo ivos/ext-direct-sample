@@ -19,8 +19,8 @@ var formPanel = Ext.create('Ext.form.FormPanel', {
 			var params = {
 				user : user
 			};
-			greetingService.sayHello(params, function(result) {
-				Ext.Msg.alert('Got from server via Ext Direct', result);
+			greetingService.sayHello(params, function(greeting) {
+				Ext.Msg.alert('Got from server via Ext Direct', greeting.text);
 			});
 		}
 	} ]

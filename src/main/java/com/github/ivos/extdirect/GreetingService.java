@@ -9,9 +9,14 @@ import ch.ralscha.extdirectspring.annotation.ExtDirectMethodType;
 public class GreetingService {
 
     @ExtDirectMethod(ExtDirectMethodType.SIMPLE_NAMED)
-    public String sayHello(User user) {
+    public Greeting sayHello(User user) {
+        System.out.println();
         System.out.println("Got from client: " + user);
-        return "Hello, " + user.getFullName() + "!";
+        Greeting greeting = new Greeting();
+        greeting.setText("Hello, " + user.getFullName() + "!");
+        greeting.setUser(user);
+        System.out.println("Returning to client: " + greeting);
+        return greeting;
     }
 
 }
