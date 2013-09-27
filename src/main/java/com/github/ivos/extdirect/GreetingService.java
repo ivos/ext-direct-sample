@@ -5,15 +5,13 @@ import org.springframework.stereotype.Service;
 import ch.ralscha.extdirectspring.annotation.ExtDirectMethod;
 import ch.ralscha.extdirectspring.annotation.ExtDirectMethodType;
 
-/**
- * @author Ivo Maixner <ivo.maixner@gmail.com>
- */
 @Service
 public class GreetingService {
 
     @ExtDirectMethod(ExtDirectMethodType.SIMPLE_NAMED)
-    public String sayHello(String name) {
-        return "Hello, " + name + "!";
+    public String sayHello(User user) {
+        System.out.println("Got from client: " + user);
+        return "Hello, " + user.getFullName() + "!";
     }
 
 }

@@ -9,17 +9,22 @@ var formPanel = Ext.create('Ext.form.FormPanel', {
 		anchor : '-10',
 		labelWidth : 65
 	},
-	items : {
-		fieldLabel : 'Name',
-		name : 'name'
-	},
+	items : [ {
+		fieldLabel : 'First name',
+		name : 'firstName'
+	}, {
+		fieldLabel : 'Last name',
+		name : 'lastName'
+	} ],
 	buttons : [ {
 		text : 'Submit',
 		handler : function() {
 			var formPanel = this.up('#formPanel');
-			var name = formPanel.getValues()['name'];
-			console.log('Name: ' + name);
-			greetingService.sayHello(name, function(result) {
+			var user = formPanel.getValues();
+			var params = {
+				user : user
+			};
+			greetingService.sayHello(params, function(result) {
 				Ext.Msg.alert('Got from server via Ext Direct', result);
 			});
 		}
@@ -29,7 +34,7 @@ var formPanel = Ext.create('Ext.form.FormPanel', {
 Ext.onReady(function() {
 	Ext.create('Ext.window.Window', {
 		title : 'Ext Direct sample',
-		height : 400,
+		height : 200,
 		width : 500,
 		layout : 'fit',
 		items : formPanel
