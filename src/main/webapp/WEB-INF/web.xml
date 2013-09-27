@@ -17,10 +17,4 @@
         <url-pattern>/action/*</url-pattern>
     </servlet-mapping>
 
-    <!-- DirectJNgine servlet <servlet> <servlet-name>DjnServlet</servlet-name> <servlet-class>com.softwarementors.extjs.djn.servlet.DirectJNgineServlet</servlet-class> 
-        <init-param> <param-name>providersUrl</param-name> <param-value>djn/directprovider</param-value> </init-param> <init-param> 
-        <param-name>apis</param-name> <param-value>sample</param-value> </init-param> <init-param> <param-name>sample.apiFile</param-name> 
-        <param-value>sample/Api.js</param-value> </init-param> <init-param> <param-name>sample.namespace</param-name> <param-value>Ext.app</param-value> 
-        </init-param> <load-on-startup>1</load-on-startup> </servlet> <servlet-mapping> <servlet-name>DjnServlet</servlet-name> <url-pattern>/djn/directprovider/*</url-pattern> 
-        </servlet-mapping> -->
 </web-app>

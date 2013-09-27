@@ -3,12 +3,7 @@ Ext.direct.Manager.addProvider(Ext.app.REMOTING_API);
 var formPanel = Ext.create('Ext.form.FormPanel', {
 	itemId : 'formPanel',
 	frame : true,
-	layout : 'anchor',
 	defaultType : 'textfield',
-	defaults : {
-		anchor : '-10',
-		labelWidth : 65
-	},
 	items : [ {
 		fieldLabel : 'First name',
 		name : 'firstName'
@@ -34,8 +29,8 @@ var formPanel = Ext.create('Ext.form.FormPanel', {
 Ext.onReady(function() {
 	Ext.create('Ext.window.Window', {
 		title : 'Ext Direct sample',
-		height : 200,
-		width : 500,
+		height : 150,
+		width : 300,
 		layout : 'fit',
 		items : formPanel
 	}).show();
