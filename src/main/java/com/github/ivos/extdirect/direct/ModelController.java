@@ -1,4 +1,4 @@
-package com.github.ivos.extdirect.controller;
+package com.github.ivos.extdirect.direct;
 
 import java.io.IOException;
 

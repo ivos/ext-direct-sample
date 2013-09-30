@@ -1,4 +1,4 @@
-package com.github.ivos.extdirect.service;
+package com.github.ivos.extdirect.direct;
 
 import org.springframework.stereotype.Service;
 
