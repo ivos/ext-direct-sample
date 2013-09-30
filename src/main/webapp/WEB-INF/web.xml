@@ -4,7 +4,7 @@
     <display-name>Ext Direct sample</display-name>
 
     <servlet>
-        <servlet-name>action</servlet-name>
+        <servlet-name>spring-ws</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
@@ -13,8 +13,8 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>action</servlet-name>
-        <url-pattern>/action/*</url-pattern>
+        <servlet-name>spring-ws</servlet-name>
+        <url-pattern>/direct/*</url-pattern>
     </servlet-mapping>
 
 </web-app>
