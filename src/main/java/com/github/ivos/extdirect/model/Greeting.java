@@ -1,8 +1,13 @@
-package com.github.ivos.extdirect;
+package com.github.ivos.extdirect.model;
+
+import ch.ralscha.extdirectspring.generator.ModelAssociation;
+import ch.ralscha.extdirectspring.generator.ModelAssociationType;
 
 public class Greeting {
 
     private String text;
+
+    @ModelAssociation(ModelAssociationType.HAS_ONE)
     private User user;
 
     public String getText() {

@@ -14,14 +14,22 @@ var formPanel = Ext.create('Ext.form.FormPanel', {
 	buttons : [ {
 		text : 'Submit',
 		handler : function() {
-			var formPanel = this.up('#formPanel');
-			var user = formPanel.getValues();
-			var params = {
-				user : user
-			};
-			greetingService.sayHello(params, function(greeting) {
-				Ext.Msg.alert('Got from server via Ext Direct', greeting.text);
-			});
+			var form = this.up('#formPanel').getForm();
+			console.log(form.getValues());
+			var user = Ext.ModelManager.create(form.getValues(),
+					'com.github.ivos.extdirect.model.User');
+			var errors = user.validate();
+			if (!errors.isValid()) {
+				form.markInvalid(errors);
+			} else {
+				var params = {
+					user : user.data
+				};
+				greetingService.sayHello(params, function(greeting) {
+					Ext.Msg.alert('Got from server via Ext Direct',
+							greeting.text);
+				});
+			}
 		}
 	} ]
 });

@@ -1,6 +1,9 @@
-package com.github.ivos.extdirect;
+package com.github.ivos.extdirect.service;
 
 import org.springframework.stereotype.Service;
+
+import com.github.ivos.extdirect.model.Greeting;
+import com.github.ivos.extdirect.model.User;
 
 import ch.ralscha.extdirectspring.annotation.ExtDirectMethod;
 import ch.ralscha.extdirectspring.annotation.ExtDirectMethodType;

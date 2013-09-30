@@ -1,8 +1,13 @@
-package com.github.ivos.extdirect;
+package com.github.ivos.extdirect.model;
+
+import javax.validation.constraints.NotNull;
 
 public class User {
 
+    @NotNull
     private String firstName;
+
+    @NotNull
     private String lastName;
 
     public String getFirstName() {
