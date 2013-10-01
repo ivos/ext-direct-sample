@@ -18,19 +18,22 @@ import com.github.ivos.extdirect.model.User;
 @Controller
 public class ModelController {
 
-    @RequestMapping("/app/model/User.js")
-    public void user(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        writeModel(request, response, User.class);
-    }
+	@RequestMapping("/app/model/User.js")
+	public void user(HttpServletRequest request, HttpServletResponse response)
+			throws IOException {
+		writeModel(request, response, User.class);
+	}
 
-    @RequestMapping("/app/model/Greeting.js")
-    public void greeting(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        writeModel(request, response, Greeting.class);
-    }
+	@RequestMapping("/app/model/Greeting.js")
+	public void greeting(HttpServletRequest request,
+			HttpServletResponse response) throws IOException {
+		writeModel(request, response, Greeting.class);
+	}
 
-    private void writeModel(HttpServletRequest request, HttpServletResponse response, Class<?> clazz)
-            throws IOException {
-        ModelGenerator.writeModel(request, response, clazz, OutputFormat.EXTJS4, IncludeValidation.BUILTIN, false);
-    }
+	private void writeModel(HttpServletRequest request,
+			HttpServletResponse response, Class<?> clazz) throws IOException {
+		ModelGenerator.writeModel(request, response, clazz,
+				OutputFormat.EXTJS4, IncludeValidation.BUILTIN, false);
+	}
 
 }
